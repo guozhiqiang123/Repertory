@@ -1,0 +1,8 @@
+apply from: rootProject.file('common-library-build.gradle')
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':lib-core')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+}

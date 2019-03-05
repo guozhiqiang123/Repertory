@@ -1,0 +1,9 @@
+apply from: rootProject.file('common-library-build.gradle')
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.inuker.bluetooth:library:1.4.0'
+    implementation rootProject.ext.dependencies["rxpermissions2"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation project(':lib-resource')
+}

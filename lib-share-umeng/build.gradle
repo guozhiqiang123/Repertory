@@ -1,0 +1,16 @@
+apply from: rootProject.file('common-library-build.gradle')
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //友盟统计
+    api 'com.umeng.sdk:common:1.5.1'
+    api 'com.umeng.sdk:analytics:7.5.1'
+    //友盟社会化分享
+    api 'com.umeng.sdk:share-core:6.9.2'
+    api 'com.umeng.sdk:share-qq:6.9.1.1'
+    api 'com.umeng.sdk:share-wechat:6.9.2'
+    api 'com.umeng.sdk:share-sina:6.9.2'
+    //分享面板
+    api 'com.umeng.sdk:shareboard-widget:6.9.2'
+    implementation project(':lib-core')
+}
